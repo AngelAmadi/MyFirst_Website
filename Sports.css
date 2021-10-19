@@ -1,0 +1,133 @@
+
+.header{ /* used for my header img/text */
+  padding : 60px; /* the space around the image */
+  width: 91%;/* I put this specific size so that it doesn't stretch too much from the width of nav bar */
+  height: 50px; /* the bg */
+  background-image:url(../images/header2.jpg);/* I need the picture here because i need it as a bg  */ /* citation: https://www.dreamstime.com/illustration/header.html*/
+  text-align: center; /* the text position */
+  color:#000000; /* the text colour */
+  background-size: cover; /* resized to cover the entire container, I just wanted the top also*/
+  font-size: 30px; /* the text size */           
+}
+body{
+  width: 100%; /* fills entire page */
+  background-color: peachpuff; /* entire page bg */
+}
+.nav{ /* nav is the atrribute that provides navigation links */
+  width: 100%; /* the bar acrosss the navigated menu */
+  height:40px; /* the length of the bar acrosss the navigated menue */
+  background-color: #9B7653; /* the menu bar color*/
+  border-radius: 10px; /* i wanted the edges rounded */   
+}   
+ul{ /* style for the items in the menu/in the bar */
+ list-style: none; /* removes the bullet points from the list, default ordered list has bullet points */
+ padding: 0; /*Padding creates extra space within an element, i used this to align the sub list and main list align */
+ 
+}
+ul li { /* style for the main list*/
+  float:left; /* style to make the list go across the page left to right  */
+  max-height: 40px;   /* I do want the height to fluctuate*/    
+}
+ul li a{ /* style for the list text */
+ width: 150px; /* wanted the list this to spread out like that*/
+ display: block; /* gives it an individual block */
+ text-decoration: none; /*takes underline out */
+ font-size:20px ; /* the text size */
+ text-align: center;/* the center of its own *block* */
+ padding: 10px;  /* the space between the text */
+ font-family: sans-serif;/* the text font */
+ color: #191919;   /* the text colour */
+}
+ul li a:hover{ /* the style of the hover */
+  background:#9B7653;/* I wanted the hover same colour as the nav */
+  border-radius: 10px; /* I curved it just like the nav */
+}
+ul li ul li {/* to alter display of the sub-list*/
+  float:none; /* aligns it to display below the main list */
+  display: none; /* hides the drop down */
+}
+ul li:hover ul li{ /* when i hover it displays the sub-list */
+  display: block;/* also gives it it's block when displayed */
+}      
+.box { /* i wanted to create a box with text in it, without a boader showing*/
+  width: 100%; /* goes across the page */
+  margin-top: 104px; /* pushes the box down  */
+  text-align: center; /* text sits middle of the box */
+  font-size: 20px;  /* size of text */ 
+}
+p{ padding: 5px 20px ; /*top and bottom of each paragraph(5) left nd right(20)*/ 
+}
+
+.events-container {
+  display: flex; /* to make the card arrange horizontal */
+  justify-content: center;  /* centralize along the line */    
+}
+
+.items-card {
+  width: 350px; /* width of card */  
+  height: 300px; /* height on card */  
+  margin: 20px;/* pushes the card equally 20px */  
+  border-radius: 15px; /* the curved edge of card */  
+  overflow: hidden; /* the oveflow(straight edge) is clipped and hidden */  
+  position: relative; /* allows other styles to fall in place regardless of me changing the orginal position of item*/  
+  /* i wanted it for the pics to be behind the text on top of it */  
+}
+.items-img {
+  width: 100%; /* fully covers card */  
+  height: 100%;/* fully covers card */  
+}
+/* stating the w&h again allows the pics to all take same position no matter the original length */  
+.items-img img {
+  width: 100%; /* fully covers card */  
+  height: 100%;/* fully covers card */  
+  object-fit: fill; /* this always the entire photo fit in card  */  
+}   
+.event-type {
+  color: #ffffff; /* text color */  
+  background-color: #151515; /*bg colour*/ 
+  padding: 10px 15px; /*top and bottom of the events type(10) left nd right(15)*/ 
+  position: absolute; /* the position of the where event type is written is fixed */  
+  left: 50%; /*I moved it this was to make it half way(mid)*/ 
+  transform: translateX(-50%);/*moves the the event type 50% left along the x axis(for 2D effect)*/ 
+  font-size: 15px;/*text size*/ 
+  border-radius: 0px 0px 12px 12px; /*the bg has 0 radius  at the top and 12px curved at the bottom*/ 
+}
+
+/*adjusting to fit other screens*/ 
+@media  (max-width:1000px){ /* the biggest with it would carry out the above else, follows diff effect*/ 
+  .events-container{
+    flex-wrap: wrap; /* allows my container to overflow, so contributes to its stacking underneath */ 
+  }
+  .items-card{
+    flex-grow: 1; /* the cards will icrease as a 1,contributes to its stacking underneath  */ 
+    width: 30%; /* to copy the amount of space it would need when it (grows)*/ 
+    height: 400px; /*height suits all*/ 
+  }
+  .items-img img{
+    object-fit: fill; /*I want the image to fill when on smaller screens*/ 
+  }
+  .box{
+    padding-top: 30px;  /*on smaller screens I want my box of text to come down a bit*/ 
+  }
+}
+@media  (max-width:1400px){/* the biggest with it would carry out the above else, as normal as above*/ 
+  .box{
+     padding-top: 20px; /*on smaller screens I want my box of text to come down a bit*/ 
+  }
+}
+.icons ul{
+  display: flex; /* to make the card arrange horizontal */
+  align-items: center;/* moves center */  
+  justify-content: center; /* centralize along the line */  
+}
+
+.icons ul img {
+  width: 30px; /* width of icon image */  
+  height: 30px;  /* width of icon image */   
+}
+   
+.icons:hover {
+  opacity: 0.6; /* when I hover I want it to be a bit opaque */  
+}
+
+ /*End of Css Document*/
